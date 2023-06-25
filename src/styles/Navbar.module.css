@@ -10,3 +10,7 @@ ul.navbarMenu {
   list-style: none;
   gap: 1em;
 }
+
+ul.navbarMenu li.navbarMenuItem a {
+  text-decoration: none;
+}
