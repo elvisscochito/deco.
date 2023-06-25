@@ -1,6 +1,25 @@
 :root {
   --primary-color: #0070F3;
 
+  --bg-color: #f5f5f5
+    /* #1e2021 */
+  ;
+  --main-color: #ffffff
+    /* #181a1b */
+  ;
+  /* --text-color: #131516 */
+  /* #e8e6e3 */
+  /* ; */
+
   --details: #c0c0c0;
   --aux-color: #D9D9D9;
+  --accent-color: #0070F3;
+
+  color-scheme: light dark;
+  accent-color: var(--accent-color);
+}
+
+::selection {
+  background-color: var(--accent-color);
+  color: hsl(0, 0%, 100%);
 }
