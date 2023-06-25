@@ -25,50 +25,50 @@ const Navbar = () => {
 
   return (
     <nav /* className={scrolled ? styles.navbarScrolled : styles.navbar} */>
-      <div className={styles.navbarContainer}>
-        <ul className={styles.navbarMenu}>
-          <li className={styles.navbarMenuItem}>
-            <HashLink smooth to="/#home" className={styles.navbarLogoLink} onClick={() => handleActiveLink('Home')}>
-              <span className={styles.navbarLogoText}>deco.</span>
-            </HashLink>
-          </li>
-          <li className={styles.navbarMenuItem}>
-            <HashLink smooth to="/#features" className={isActivateLink === 'Features' ? styles.navbarMenuLinkActive : styles.navbarMenuLink} onClick={() => handleActiveLink('Features')}>
-              Features
-            </HashLink>
-          </li>
-          <li className={styles.navbarMenuItem}>
-            <HashLink smooth to="/#benefits" className={isActivateLink === 'Benefits' ? styles.navbarMenuLinkActive : styles.navbarMenuLink} onClick={() => handleActiveLink('Benefits')}>
-              Benefits
-            </HashLink>
-          </li>
-          <li className={styles.navbarMenuItem}>
-            <HashLink smooth to="/#reviews" className={isActivateLink === 'Reviews' ? styles.navbarMenuLinkActive : styles.navbarMenuLink} onClick={() => handleActiveLink('Reviews')}>
-              Reviews
-            </HashLink>
-          </li>
-          <li className={styles.navbarMenuItem}>
-            <HashLink smooth to="/#faq" className={isActivateLink === 'FAQ' ? styles.navbarMenuLinkActive : styles.navbarMenuLink} onClick={() => handleActiveLink('FAQ')}>
-              FAQ
-            </HashLink>
-          </li>
-          <li className={styles.navbarMenuItem}>
-            <NavLink to="/tweets" accessKey='T'>
-              Tweets
-            </NavLink>
-          </li>
-          <li className={styles.navbarMenuItem}>
-            <NavLink to="/post" accessKey='P'>
-              Post
-            </NavLink>
-          </li>
-          <li className={styles.navbarMenuItem}>
-            <NavLink to="/whats" accessKey='W'>
-              Whats
-            </NavLink>
-          </li>
-        </ul>
-      </div>
+      {/* <div className={styles.navbarContainer}> */}
+      <ul className={styles.navbarMenu}>
+        <li className={styles.navbarMenuItem}>
+          <HashLink smooth to="/#home" className={styles.navbarLogoLink} onClick={() => handleActiveLink('Home')}>
+            <span className={styles.navbarLogoText}>deco.</span>
+          </HashLink>
+        </li>
+        <li className={styles.navbarMenuItem}>
+          <HashLink smooth to="/#features" className={isActivateLink === 'Features' ? styles.navbarMenuLinkActive : styles.navbarMenuLink} onClick={() => handleActiveLink('Features')}>
+            Features
+          </HashLink>
+        </li>
+        <li className={styles.navbarMenuItem}>
+          <HashLink smooth to="/#benefits" className={isActivateLink === 'Benefits' ? styles.navbarMenuLinkActive : styles.navbarMenuLink} onClick={() => handleActiveLink('Benefits')}>
+            Benefits
+          </HashLink>
+        </li>
+        <li className={styles.navbarMenuItem}>
+          <HashLink smooth to="/#reviews" className={isActivateLink === 'Reviews' ? styles.navbarMenuLinkActive : styles.navbarMenuLink} onClick={() => handleActiveLink('Reviews')}>
+            Reviews
+          </HashLink>
+        </li>
+        <li className={styles.navbarMenuItem}>
+          <HashLink smooth to="/#faq" className={isActivateLink === 'FAQ' ? styles.navbarMenuLinkActive : styles.navbarMenuLink} onClick={() => handleActiveLink('FAQ')}>
+            FAQ
+          </HashLink>
+        </li>
+        <li className={styles.navbarMenuItem}>
+          <NavLink to="/tweets" accessKey='T'>
+            Tweets
+          </NavLink>
+        </li>
+        <li className={styles.navbarMenuItem}>
+          <NavLink to="/post" accessKey='P'>
+            Post
+          </NavLink>
+        </li>
+        <li className={styles.navbarMenuItem}>
+          <NavLink to="/whats" accessKey='W'>
+            Whats
+          </NavLink>
+        </li>
+      </ul>
+      {/* </div> */}
     </nav>
   )
 }
