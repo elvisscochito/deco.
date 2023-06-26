@@ -15,7 +15,7 @@ const Navbar = () => {
     setIsActivateLink(e);
   }
 
-  const handleActiveIcon = () => {
+  const toggleIcon = () => {
     if (activeIcon === faBars) {
       setActiveIcon(faXmark);
     } else {
@@ -86,7 +86,7 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li className={styles.navbarItem}>
-          <FontAwesomeIcon icon={activeIcon} className={styles.navbarIconMenuHamburger} onClick={handleActiveIcon} />
+          <FontAwesomeIcon icon={activeIcon} className={styles.navbarIconMenuHamburger} onClick={toggleIcon} />
         </li>
       </ul>
       {/* </div> */}
