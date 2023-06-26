@@ -1,4 +1,4 @@
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
@@ -8,9 +8,19 @@ import styles from '../styles/Navbar.module.css';
 const Navbar = () => {
   const [isActivateLink, setIsActivateLink] = useState('Home');
   /* const [scrolled, setScrolled] = useState(false); */
+  /* const [activeIcon, setActiveIcon] = useState(false); */
+  const [activeIcon, setActiveIcon] = useState(faBars);
 
   const handleActiveLink = (e) => {
     setIsActivateLink(e);
+  }
+
+  const handleActiveIcon = () => {
+    if (activeIcon === faBars) {
+      setActiveIcon(faXmark);
+    } else {
+      setActiveIcon(faBars);
+    }
   }
 
   /* useLayoutEffect(() => {
@@ -76,7 +86,7 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li className={styles.navbarItem}>
-          <FontAwesomeIcon icon={faBars} className={styles.navbarIconMenuHamburger} />
+          <FontAwesomeIcon icon={activeIcon} className={styles.navbarIconMenuHamburger} onClick={handleActiveIcon} />
         </li>
       </ul>
       {/* </div> */}

@@ -1,5 +1,7 @@
+/* -- MOBILE FIRST -- */
+
 nav {
-  padding: 1.25rem 1rem;
+  padding: 0.5rem;
   border-bottom: 1px solid var(--aux-color);
   background-color: var(--bg-color);
 }
@@ -7,71 +9,136 @@ nav {
 ul.navbarContainer {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
+  /* justify-content: center; */
   align-items: center;
   list-style: none;
-  gap: 1em;
+  /* position: relative; */
 }
 
-ul.navbarContainer li.navbarItem {
+nav ul.navbarContainer li.navbarItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul.navbarContainer li.navbarItem span.navbarLogoText {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+/* ul.navbarContainer li.navbarItem:first-child {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+ul.navbarContainer li.navbarItem:last-child {
+  position: absolute;
+  right: 0;
+} */
+
+ul.navbarContainer li.navbarItem .navbarIconMenuHamburger {
+  font-size: 1.8em;
+}
+
+ul.navbarContainer li.navbarItem:not(:first-child):not(:last-child) {
+  display: none;
+}
+
+ul.navbarContainer li.navbarItem a {
   font-size: 1.15rem;
-}
-
-ul.navbarContainer li.navbarItem:first-child {
-  margin-right: auto;
 }
 
 ul.navbarContainer li.navbarItem a {
   text-decoration: none;
 }
 
-/* ul.navbarContainer li.navbarItem:nth-last-child(-n+4) a {
-  font-weight: bold;
-  font-size: 1.25rem;
-} */
-
-ul.navbarContainer li.navbarItem:not(:first-child):nth-child(-n+5) a {
-  color: var(--details);
-  font-weight: 300;
-}
-
 ul.navbarContainer hr {
-  border: none;
-  border-left: 1.5px solid var(--aux-color);
-  height: 1.5em;
-}
-
-/* ul.navbarContainer li.navbarItem:nth-child(5)::after {
-  content: "|";
-  margin-left: 1em;
-  color: var(--details);
-} */
-
-ul.navbarContainer li.navbarItem:nth-last-child(-n+5):not(:last-child) a {
-  font-weight: 450;
-}
-
-ul.navbarContainer li.navbarItem:nth-last-child(-n+5):not(:nth-last-child(2)):not(:last-child) a {
-  color: var(--accent-color);
-}
-
-ul.navbarContainer li.navbarItem:nth-last-child(2) a {
-  background-color: var(--accent-color);
-  color: white;
-  font-weight: 700;
-  padding: 0.5rem 1rem;
-  border-radius: .5em;
-  -webkit-border-radius: .5em;
-  -moz-border-radius: .5em;
-  -ms-border-radius: .5em;
-  -o-border-radius: .5em;
-}
-
-ul.navbarContainer li.navbarItem:last-child {
   display: none;
 }
 
-/* ul.navbarContainer li.navbarItem .navbarIconMenuHamburger {
-  cursor: pointer;
-  font-size: 1.8em;
-} */
+/* -- RESPONSIVE DESIGN (TABLETS AND COMPUTERS) -- */
+
+/* 768px */
+@media only screen and (min-width: 770px) {
+  nav {
+    padding: .85rem 1rem;
+    border-bottom: 1px solid var(--aux-color);
+    background-color: var(--bg-color);
+  }
+
+  ul.navbarContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    gap: 1em;
+  }
+
+  /* nav ul.navbarContainer li.navbarItem span.navbarLogoText {
+    font-size: 1.5rem;
+  } */
+
+  /* repeat the rule for same specificity level */
+  ul.navbarContainer li.navbarItem:not(:first-child):not(:last-child) {
+    display: list-item;
+  }
+
+  ul.navbarContainer li.navbarItem a {
+    font-size: 1.15rem;
+  }
+
+  ul.navbarContainer li.navbarItem:first-child {
+    margin-right: auto;
+  }
+
+  ul.navbarContainer li.navbarItem a {
+    text-decoration: none;
+  }
+
+  ul.navbarContainer li.navbarItem:not(:first-child):nth-child(-n+5) a {
+    color: var(--details);
+    font-weight: 300;
+  }
+
+  ul.navbarContainer hr {
+    display: block;
+    border: none;
+    border-left: 1.5px solid var(--aux-color);
+    height: 1.5em;
+  }
+
+  /* ul.navbarContainer li.navbarItem:nth-child(5)::after {
+    content: "|";
+    margin-left: 1em;
+    color: var(--details);
+  } */
+
+  ul.navbarContainer li.navbarItem:nth-last-child(-n+5):not(:last-child) a {
+    font-weight: 450;
+  }
+
+  ul.navbarContainer li.navbarItem:nth-last-child(-n+5):not(:nth-last-child(2)):not(:last-child) a {
+    color: var(--accent-color);
+  }
+
+  ul.navbarContainer li.navbarItem:nth-last-child(2) a {
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: .5em;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    -ms-border-radius: .5em;
+    -o-border-radius: .5em;
+  }
+
+  ul.navbarContainer li.navbarItem:last-child {
+    display: none;
+  }
+}
